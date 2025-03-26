@@ -132,7 +132,7 @@ def clip(data):
     return data
 
 def gaussian(x, mu, sig):
-    distribution = 1./(np.sqrt(2.*np.pi) * sig) * np.exp(-np.power((x-mu)/sig, 2.)/22)
+    distribution = 1./(np.sqrt(2.*np.pi) * sig) * np.exp(-np.power((x-mu)/sig, 2.)/2)
     return distribution/np.max(distribution)
 
 def match_per_run(bounds_seed, bounds_other):

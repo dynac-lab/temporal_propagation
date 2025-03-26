@@ -22,7 +22,7 @@ nr_permutations_coinflip = 10000
 speech_blocks = np.arange(1,13,2)
 music_blocks = np.arange(0,13,2)
 band = 'preproc'
-gaussian_sd = GSBS_fs * 0.1 # gaussian_sd in number of timepoints. Final factor (in seconds) determined by inspection various options with subject 5 clauses, 1000 permutations areound the peak
+gaussian_sd = GSBS_fs * 0.332 # gaussian_sd in number of timepoints. Final factor (in seconds) determined by inspection of various options
 
 
 ### ROI definitions
