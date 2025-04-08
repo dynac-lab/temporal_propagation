@@ -115,8 +115,7 @@ n_f = matrix_optimal_delay[n_idx_novel,:][:,n_idx_familiar]
 np.save(cfg.dir_analysis_results + 'RQ4_prediction/' + 'matrix_optimal_delays', matrix_optimal_delay)
 
 # Permutation test
-#TODO: adjust number of permutations
-nr_permutations = 10
+nr_permutations = 10000
 measure_data = np.nanmedian(f_n)
 print("Optimal delay familiar to novel = " + str(measure_data))
 measure_null = []
@@ -145,5 +144,4 @@ tail_high_count = np.sum(np.asarray(measure_null) <= measure_data)
 p = (min(tail_low_count, tail_high_count) / nr_permutations)*2
 print("p = " + str(p))
 
-# TODO Save p
-# np.save(cfg.dir_analysis_results + 'RQ4_prediction/' + 'p_value', p)
+np.save(cfg.dir_analysis_results + 'RQ4_prediction/' + 'p_value', p)

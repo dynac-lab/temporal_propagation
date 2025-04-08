@@ -95,7 +95,7 @@ for sub1 in subjects:
                 ax = fig.add_subplot(projection='3d')
                 coords_per_channel = np.load(cfg.dir_electrode_labels + "sub-" + subject + "/coords_per_channel_" + subject + '.npy', allow_pickle=True).item()
 
-                # Get coords included and excluded channels seperately
+                # Get coords included and excluded channels separately
                 coords_incl = np.asarray([coords_per_channel[ch_name] for ch_name in channel_selection_per_subject[n]])
                 coords_excl = np.asarray([coords_per_channel[ch_name] for ch_name in coords_per_channel.keys() if ch_name not in channel_selection_per_subject[n] and ch_name not in cfg.bad_channels[subject]])
 

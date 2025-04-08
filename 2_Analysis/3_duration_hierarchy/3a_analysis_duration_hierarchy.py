@@ -39,7 +39,6 @@ plt.xlabel("ROI")
 plt.ylabel("Median duration (s)")
 plt.tight_layout()
 plt.savefig(cfg.dir_analysis_results + '3_duration_hierarchy/' + 'median_durations')
-# TODO: get legend for novel vs familiar
 
 
 # No statistical analysis because this will not lead to anything
